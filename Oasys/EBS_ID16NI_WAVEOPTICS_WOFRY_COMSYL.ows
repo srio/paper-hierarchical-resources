@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<scheme description="ESRF ID16NI" title="ESRF EBS ID16NI WAVE OPTICS WOFRY COMSYL" version="2.0" working_directory="/users/srio/Working/paper-hierarchical/WORKSPACES" workspace_units="1">
+<scheme description="ESRF ID16NI" title="ESRF EBS ID16NI WAVE OPTICS WOFRY COMSYL" version="2.0" working_directory="/users/srio/Oasys/paper-hierarchical-resources/Oasys" workspace_units="1">
 	<nodes>
 		<node id="0" name="Generic Wavefront 2D" position="(11.0, 155.0)" project_name="OASYS1-WOFRY" qualified_name="orangecontrib.wofry.widgets.wavefront_propagation.ow_generic_wavefront_2D.OWGenericWavefront2D" title="Generic Spherical Wavefront R=28.3m" version="" />
 		<node id="1" name="Python Script" position="(125.0, 155.0)" project_name="OASYS1" qualified_name="oasys.widgets.tools.ow_python_script.OWPythonScript" title="Gauss Profile 2D at 28.3m" version="" />

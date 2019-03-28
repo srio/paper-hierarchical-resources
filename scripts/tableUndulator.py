@@ -37,10 +37,10 @@ if __name__ == "__main__":
 
     print(txt)
 
-    f = open("../tableUndulator.txt",'w')
+    f = open("/tmp/tableUndulator.txt",'w')
     f.write(txt)
     f.close()
-    print("File ../tableUndulator.txt written to disk.")
+    print("File /tmp/tableUndulator.txt written to disk.")
 
 
 

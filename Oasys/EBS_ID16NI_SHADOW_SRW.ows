@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<scheme description="ESRF ID16NI" title="ESRF EBS ID16NI SHADOW SRW" version="2.0" working_directory="/Users/srio/Oasys" workspace_units="1">
+<scheme description="ESRF ID16NI" title="ESRF EBS ID16NI SHADOW SRW" version="2.0" working_directory="/users/srio/Oasys/paper-hierarchical-resources/Oasys" workspace_units="1">
 	<nodes>
 		<node id="0" name="Undulator" position="(202.0, 1506.0)" project_name="OASYS1-SRW" qualified_name="orangecontrib.srw.widgets.light_sources.ow_srw_undulator.OWSRWUndulator" title="SRW Undulator EBS" version="" />
 		<node id="1" name="Elliptical Mirror" position="(450.0, 1512.0)" project_name="OASYS1-SRW" qualified_name="orangecontrib.srw.widgets.optical_elements.ow_srw_elliptical_mirror.OWSRWEllipticalMirror" title="Elliptical Mirror" version="" />
@@ -88,6 +88,8 @@
 		<node id="84" name="Ideal Lens" position="(767.0, 34.0)" project_name="OASYS1-ShadowOui" qualified_name="orangecontrib.shadow.widgets.special_elements.ow_ideal_lens.IdealLens" title="Ideal Lens (4)" version="" />
 		<node id="85" name="Generic Wavefront 1D" position="(258.0, 1341.0)" project_name="OASYS1-WOFRY" qualified_name="orangecontrib.wofry.widgets.wavefront_propagation.ow_generic_wavefront_1D.OWGenericWavefront1D" title="Generic Wavefront 1D" version="" />
 		<node id="86" name="Slit 1D" position="(419.0, 1332.0)" project_name="OASYS1-WOFRY" qualified_name="orangecontrib.wofry.widgets.beamline_elements.ow_slits_1d.OWWOSlit1D" title="Slit 1D" version="" />
+		<node id="87" name="Undulator Spectrum" position="(166.0, 815.0)" project_name="OASYS1-XOPPY" qualified_name="orangecontrib.xoppy.widgets.source.undulator_spectrum.OWundulator_spectrum" title="Undulator Spectrum" version="" />
+		<node id="88" name="Undulator Radiation" position="(70.0, 810.0)" project_name="OASYS1-XOPPY" qualified_name="orangecontrib.xoppy.widgets.source.undulator_radiation.OWundulator_radiation" title="Undulator Radiation" version="" />
 	</nodes>
 	<links>
 		<link enabled="true" id="0" sink_channel="SRWData" sink_node_id="2" source_channel="SRWData" source_node_id="1" />
@@ -117,7 +119,7 @@
 		<link enabled="true" id="24" sink_channel="Input Beam" sink_node_id="30" source_channel="Beam" source_node_id="22" />
 		<link enabled="true" id="25" sink_channel="Input Beam" sink_node_id="38" source_channel="Beam" source_node_id="37" />
 		<link enabled="true" id="26" sink_channel="Input Beam" sink_node_id="41" source_channel="Beam" source_node_id="22" />
-		<link enabled="true" id="27" sink_channel="SynedData" sink_node_id="34" source_channel="SynedData" source_node_id="35" />
+		<link enabled="false" id="27" sink_channel="SynedData" sink_node_id="34" source_channel="SynedData" source_node_id="35" />
 		<link enabled="true" id="28" sink_channel="Input Beam" sink_node_id="43" source_channel="Beam" source_node_id="42" />
 		<link enabled="true" id="29" sink_channel="in_object_1" sink_node_id="44" source_channel="Beam" source_node_id="17" />
 		<link enabled="true" id="30" sink_channel="Input Beam" sink_node_id="22" source_channel="out_object" source_node_id="44" />
@@ -139,7 +141,7 @@
 		<link enabled="true" id="46" sink_channel="Input Beam" sink_node_id="60" source_channel="Beam" source_node_id="62" />
 		<link enabled="true" id="47" sink_channel="Input Beam" sink_node_id="63" source_channel="Beam" source_node_id="60" />
 		<link enabled="true" id="48" sink_channel="Input Beam" sink_node_id="32" source_channel="Beam" source_node_id="63" />
-		<link enabled="true" id="49" sink_channel="SynedData" sink_node_id="64" source_channel="SynedData" source_node_id="33" />
+		<link enabled="false" id="49" sink_channel="SynedData" sink_node_id="64" source_channel="SynedData" source_node_id="33" />
 		<link enabled="true" id="50" sink_channel="Input Beam" sink_node_id="65" source_channel="Beam" source_node_id="53" />
 		<link enabled="true" id="51" sink_channel="Input Beam" sink_node_id="68" source_channel="Beam" source_node_id="67" />
 		<link enabled="true" id="52" sink_channel="Input Beam" sink_node_id="69" source_channel="Beam" source_node_id="68" />
@@ -164,6 +166,7 @@
 		<link enabled="true" id="71" sink_channel="Input Beam" sink_node_id="57" source_channel="Beam" source_node_id="64" />
 		<link enabled="true" id="72" sink_channel="Input Beam" sink_node_id="66" source_channel="Beam" source_node_id="64" />
 		<link enabled="true" id="73" sink_channel="GenericWavefront1D" sink_node_id="86" source_channel="GenericWavefront1D" source_node_id="85" />
+		<link enabled="true" id="74" sink_channel="SynedData" sink_node_id="88" source_channel="SynedData" source_node_id="35" />
 	</links>
 	<annotations>
 		<text font-family="Helvetica" font-size="16" id="0" rect="(76.0, 1116.0, 276.0, 97.0)">#############################
@@ -5463,6 +5466,34 @@ EYdxElJxE1gIAAAAc2NhbGVkX05xFEtkWAgAAABzY2FsZWRfUnEVR0CPQAAAAAAAWAsAAABzY2Fs
 ZWRfUm1heHEWR0BZAAAAAAAAWA4AAABzY2FsZWRfZ3Vlc3NfUnEXiFgFAAAAc2hhcGVxGEsAWA0A
 AABzdXJmYWNlX3NoYXBlcRlLAFgOAAAAdmVydGljYWxfc2hpZnRxGkcAAAAAAAAAAFgJAAAAdmll
 d190eXBlcRtLAXUu
+</properties>
+		<properties format="pickle" node_id="87">gAN9cQAoWAgAAABESVNUQU5DRXEBR0A7GZmZmZmaWBcAAABFTEVDVFJPTkJFQU1ESVZFUkdFTkNF
+SHECRz7locUPqLpVWBcAAABFTEVDVFJPTkJFQU1ESVZFUkdFTkNFVnEDRz6zi40OXk4nWBEAAABF
+TEVDVFJPTkJFQU1TSVpFSHEERz87Mg7fsJj+WBEAAABFTEVDVFJPTkJFQU1TSVpFVnEFRz7MzXMU
+ZIX6WA8AAABFTEVDVFJPTkNVUlJFTlRxBkc/yZmZmZmZmlgOAAAARUxFQ1RST05FTkVSR1lxB0dA
+GCXjU/fO2VgUAAAARUxFQ1RST05FTkVSR1lTUFJFQURxCEc/UgW8AaNuL1gEAAAAR0FQSHEJRz9Q
+Yk3S8an8WAQAAABHQVBWcQpHP1BiTdLxqfxYAgAAAEtWcQtHP/LMzMzMzM1YBgAAAE1FVEhPRHEM
+SwJYCAAAAE5QRVJJT0RTcQ1LTFgIAAAAUEVSSU9ESURxDkc/kr08NhE0BVgPAAAAUEhPVE9ORU5F
+UkdZTUFYcQ9HQOrbAAAAAABYDwAAAFBIT1RPTkVORVJHWU1JTnEQR0CncAAAAAAAWBIAAABQSE9U
+T05FTkVSR1lQT0lOVFNxEU3QB1gNAAAAVVNFRU1JVFRBTkNFU3ESSwFYEwAAAHNhdmVkV2lkZ2V0
+R2VvbWV0cnlxE2NQeVF0NS5zaXAKX3VucGlja2xlX3R5cGUKcRRYDAAAAFB5UXQ1LlF0Q29yZXEV
+WAoAAABRQnl0ZUFycmF5cRZDMgHZ0MsAAgAAAAAHrQAAALcAAAzUAAADjgAAB60AAADTAAAM1AAA
+A44AAAABAAAAAAaQcReFcRiHcRlScRpYCQAAAHZpZXdfdHlwZXEbSwF1Lg==
+</properties>
+		<properties format="pickle" node_id="88">gAN9cQAoWAgAAABESVNUQU5DRXEBR0A7GZmZmZmaWBcAAABFTEVDVFJPTkJFQU1ESVZFUkdFTkNF
+SHECRz7locUPqLpVWBcAAABFTEVDVFJPTkJFQU1ESVZFUkdFTkNFVnEDRz6zi40OXk4nWBEAAABF
+TEVDVFJPTkJFQU1TSVpFSHEERz87Mg7fsJj+WBEAAABFTEVDVFJPTkJFQU1TSVpFVnEFRz7MzXMU
+ZIX6WA8AAABFTEVDVFJPTkNVUlJFTlRxBkc/yZmZmZmZmlgOAAAARUxFQ1RST05FTkVSR1lxB0dA
+GCXjU/fO2VgUAAAARUxFQ1RST05FTkVSR1lTUFJFQURxCEc/UgW8AaNuL1gEAAAAR0FQSHEJRz+O
+uFHrhR64WAQAAABHQVBWcQpHP464UeuFHrhYDAAAAEg1X0ZJTEVfRFVNUHELSwBYDgAAAEhBUk1P
+TklDTlVNQkVScQxLAVgLAAAASFNMSVRQT0lOVFNxDUuNWAIAAABLVnEORz/ceuFHrhR7WAYAAABN
+RVRIT0RxD0sCWAgAAABOUEVSSU9EU3EQR0BTAAAAAAAAWAgAAABQRVJJT0RJRHERRz+SvTw2ETQF
+WA8AAABQSE9UT05FTkVSR1lNQVhxEkdA0M4szMzMzVgPAAAAUEhPVE9ORU5FUkdZTUlOcRNHQNDO
+JmZmZmZYEgAAAFBIT1RPTkVORVJHWVBPSU5UU3EUSwJYDAAAAFNFVFJFU09OQU5DRXEVSwJYDQAA
+AFVTRUVNSVRUQU5DRVNxFksAWAsAAABWU0xJVFBPSU5UU3EXS41YEwAAAHNhdmVkV2lkZ2V0R2Vv
+bWV0cnlxGGNQeVF0NS5zaXAKX3VucGlja2xlX3R5cGUKcRlYDAAAAFB5UXQ1LlF0Q29yZXEaWAoA
+AABRQnl0ZUFycmF5cRtDMgHZ0MsAAgAAAAAARgAAADQAAAVtAAADCwAAAEYAAABQAAAFbQAAAwsA
+AAAAAAAAAAaQcRyFcR2HcR5ScR9YCQAAAHZpZXdfdHlwZXEgSwF1Lg==
 </properties>
 	</node_properties>
 </scheme>

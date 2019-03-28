@@ -77,10 +77,10 @@ if __name__ == "__main__":
 
     print(txt)
     
-    f = open("../tableHandCalculations.txt",'w')
+    f = open("/tmp/tableHandCalculations.txt",'w')
     f.write(txt)
     f.close()
-    print("File ../tableHandCalculations.txt written to disk.")
+    print("File /tmp/tableHandCalculations.txt written to disk.")
 
     print("Demagnification H x V: ",demagX[0]*demagX[1],demagZ)
 

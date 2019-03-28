@@ -31,10 +31,10 @@ if __name__ == "__main__":
 
     print(txt)
     
-    f = open("../tableElectron.txt",'w')
+    f = open("/tmp/tableElectron.txt",'w')
     f.write(txt)
     f.close()
-    print("File ../tableElectron.txt written to disk.")
+    print("File /tmp/tableElectron.txt written to disk.")
 
 
 
