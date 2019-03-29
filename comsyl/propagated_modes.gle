@@ -1,0 +1,68 @@
+! gle graphic, customized srio@esrf.eu 20130131
+!
+! global settings
+!
+!size 21.0 29.7               ! size of paper A4 (in cm)
+!amove 1 7                    ! origin of graph in paper coordinates
+
+size 18 12             !Sets the size of the graph in cm
+set font texcmr hei 0.75      ! font "computer modern roman" size
+
+!
+! create graph
+!
+begin graph
+        !math                  ! axes in the center
+        scale auto
+        size 18 12             !Sets the size of the graph in cm
+        xticks off
+        !
+        ! titles
+        !
+        !title "from xplot..."  ! hei 1 color red dist 2
+        xtitle "Coherent mode index m"
+        ytitle "Mode transfer M_{mm}"
+        !
+        ! axes & limits
+        !
+        xaxis min -0.7 max 9.7  dticks 1
+        ! yaxis log min 0.0001 max 5.0  ! dticks  0.1 dsubticks 0.05
+        yaxis min 0.0 max 0.25  ! dticks  0.1 dsubticks 0.05
+        !
+        ! reads data
+        !
+        data propagated_modes.dat
+        ylabels log l25
+        !
+        ! plot data
+        !
+        !d1 line color blue hist    !lstyle 4 color blue
+
+        key pos tl
+        bar d1 width 0.5,0.5 fill blue ! style red purplecolormap,yellowcolormap
+        ! d1 line bar color blue
+
+        !bar d3 width 0.5,0.5 fill green ! style red purplecolormap,yellowcolormap
+
+        !bar d2 width 0.5,0.5 fill red ! style red purplecolormap,yellowcolormap
+end graph                               
+
+!
+! legend
+!
+
+!set font texcmr hei 0.5      ! font "computer modern roman" size
+!begin key
+!   nobox
+!   pos tr
+!   line color blue text "EBS"
+!   line color green text "current Low\beta"
+!   line color red text "curent High\beta"
+!end key
+!
+! draw label at any point (graph coordinates)
+!set just cc
+!amove xg(0.25) yg(0.5)
+!tex "$\displaystyle\log a = \int_{1}^{a}{\textstyle \frac{1}{x}\,dx}$"
+
+

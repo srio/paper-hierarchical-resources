@@ -6,8 +6,8 @@ from wofry.propagator.propagator import PropagationManager, PropagationElements,
 from wofry.propagator.propagators2D.fresnel_zoom_xy import FresnelZoomXY2D
 from srxraylib.plot.gol import plot_image
 
-from comsyl_wofry_beamline import ComsylWofryBeamline
-from comsyl_wofry_beamline_element import ComsylWofryBeamlineElement
+from comsyl.waveoptics.ComsylWofryBeamline import ComsylWofryBeamline
+from comsyl.waveoptics.ComsylWofryBeamlineElement import ComsylWofryBeamlineElement
 import pickle
 
 

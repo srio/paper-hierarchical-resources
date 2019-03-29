@@ -14,8 +14,8 @@ from comsyl.waveoptics.Wavefront import NumpyWavefront, SRWWavefront
 
 if __name__ == "__main__":
 
-    filename = "/users/srio/Working/paper-hierarchical/CODE-COMSYL/propagation_wofry_EBS/propagated_beamline.npz"
-    filename_out = "/users/srio/Working/paper-hierarchical/CODE-COMSYL/propagation_wofry_EBS/rediagonalized.npz"
+    filename =     "/users/srio/Oasys/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/propagated_beamline.npz"
+    filename_out = "/users/srio/Oasys/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/rediagonalized.npz"
 
     af_name = filename.split("/")[-1].replace(".npz", "")
 
