@@ -1,4 +1,4 @@
-from orangecontrib.comsyl.util.CompactAFReader import CompactAFReader
+from comsyl.autocorrelation.CompactAFReader import CompactAFReader
 import numpy as np
 
 from srxraylib.plot.gol import plot_image, plot
