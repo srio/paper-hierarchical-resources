@@ -2,11 +2,13 @@ import numpy
 from srxraylib.plot.gol import plot_image,plot_surface, plot
 import matplotlib.pylab as plt
 from comsyl.autocorrelation.CompactAFReader import CompactAFReader
+from comsyl.autocorrelation.AutocorrelationFunction import AutocorrelationFunction
 
 
 def plot_spectral_density(afp,mode=None,spectral_density=True,do_plot=False,
                           xrange=None,yrange=None,figsize=[9,5],
-                          show_profiles=False,filename="",aspect="equal"):
+                          show_profiles=False,filename="",aspect="equal",
+                          yticks=None):
 
     if spectral_density:
         if mode is None:
@@ -35,7 +37,8 @@ def plot_spectral_density(afp,mode=None,spectral_density=True,do_plot=False,
     # else:
     ax.xaxis.label.set_size(15)
     ax.yaxis.label.set_size(20)
-    plt.yticks([-15,-10,-5,0,5,10,15],fontsize=20)
+    plt.yticks(yticks) # [-15,-10,-5,0,5,10,15])
+    plt.yticks(fontsize=20)
     plt.xticks(fontsize=20)
 
     if filename != "":
@@ -47,23 +50,29 @@ def plot_spectral_density(afp,mode=None,spectral_density=True,do_plot=False,
 if __name__ == "__main__":
 
 
-    if True:
+    if False:
         filename_ebs="/scisoft/data/srio/COMSYL/ID16/id16s_ebs_u18_1400mm_1h_new_s1.0.npy"
         af = CompactAFReader.initialize_from_file(filename_ebs)
-        plot_spectral_density(af, mode=None, spectral_density=True, do_plot=True, xrange=[-75,75],yrange=[-20,20],figsize=(12,4),      filename="ebs_spectral_density.png")
-        plot_spectral_density(af, mode=0,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),filename="ebs_mode0.png")
-        plot_spectral_density(af, mode=1,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),filename="ebs_mode1.png")
-        plot_spectral_density(af, mode=2,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),filename="ebs_mode2.png")
-        plot_spectral_density(af, mode=3,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),filename="ebs_mode3.png")
+        yticks = [-15,-10,-5,0,5,10,15]
+        plot_spectral_density(af, mode=None, spectral_density=True, do_plot=True, xrange=[-75,75],yrange=[-20,20],figsize=(12,4),      yticks=yticks,filename="/tmp/ebs_spectral_density.png")
+        plot_spectral_density(af, mode=0,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),yticks=yticks,filename="/tmp/ebs_mode0.png")
+        plot_spectral_density(af, mode=1,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),yticks=yticks,filename="/tmp/ebs_mode1.png")
+        plot_spectral_density(af, mode=2,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),yticks=yticks,filename="/tmp/ebs_mode2.png")
+        plot_spectral_density(af, mode=3,    spectral_density=False, do_plot=True, xrange=[-75./2,75./2],yrange=[-20,20],figsize=(6,4),yticks=yticks,filename="/tmp/ebs_mode3.png")
 
+    if True:
+        yticks = [-20, -10, 0, 10, 20]
 
-    if False:
-        filename_hb ="/scisoft/data/srio/COMSYL/ID16/id16s_hb_u18_1400mm_1h_s1.0.npy"
+        filename_hb = "/scisoft/data/srio/COMSYL/ID16/id16s_hb_u18_1400mm_1h_s1.0.h5"
         af = CompactAFReader.initialize_from_file(filename_hb)
-        plot_spectral_density(af, mode=None, spectral_density=True, do_plot=True, xrange=[-1000,1000],yrange=[-20,20],
-                              figsize=(12,4),filename="ebs_spectral_density.png",aspect="auto")
+        # plot_spectral_density(af, mode=None, spectral_density=True,  do_plot=True, xrange=[-1000,1000], yrange=[-20*1.5,20*1.5],figsize=(12,4),yticks=yticks,filename="/tmp/esrf_spectral_density.png",aspect="auto")
 
-        plot_spectral_density(af, mode=0, spectral_density=False, do_plot=True, xrange=[-75. / 2, 75. / 2], yrange=[-20, 20],
-                              figsize=(6, 4), filename="ebs_mode0.png")
+        # filename_hb = "/scisoft/data/srio/COMSYL/ID16/id16s_hb_u18_1400mm_1h_s1.0.npy"
+        # af_ = AutocorrelationFunction.load(filename_hb)
+        plot_spectral_density(af, mode=0,    spectral_density=False, do_plot=True, xrange=[-75.,75.],   yrange=[-20*1.5,20*1.5],figsize=(6,4), yticks=yticks,filename="/tmp/esrf_mode0.png")
+        plot_spectral_density(af, mode=1,    spectral_density=False, do_plot=True, xrange=[-75.,75.],   yrange=[-20*1.5,20*1.5],figsize=(6,4), yticks=yticks,filename="/tmp/esrf_mode1.png")
+        plot_spectral_density(af, mode=2,    spectral_density=False, do_plot=True, xrange=[-75.,75.],   yrange=[-20*1.5,20*1.5],figsize=(6,4), yticks=yticks,filename="/tmp/esrf_mode2.png")
+        plot_spectral_density(af, mode=3,    spectral_density=False, do_plot=True, xrange=[-75.,75.],   yrange=[-20*1.5,20*1.5],figsize=(6,4), yticks=yticks,filename="/tmp/esrf_mode3.png")
+
 
 

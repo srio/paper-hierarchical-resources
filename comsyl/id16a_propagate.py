@@ -123,13 +123,22 @@ if __name__ == "__main__":
 
 
     method = 'WOFRY'
+    lattice = "EBS"
+
+    if lattice == "EBS":
+        python_to_be_used = "/users/srio/OASYS1.1d/miniconda3/bin/python"
+        filename = "/scisoft/data/srio/COMSYL/ID16/id16s_ebs_u18_1400mm_1h_new_s1.0.npz"
+    else:
+        python_to_be_used = "/scisoft/users/srio/COMSYL_CONDA/miniconda3/bin/python"
+        filename = "/scisoft/data/srio/COMSYL/ID16/id16s_hb_u18_1400mm_1h_s1.0.npz"
+
+    python_to_be_used = "/scisoft/users/srio/COMSYL_CONDA/miniconda3/bin/python"
+
 
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
-    print("++++ method =     %s "%(method))
+    print("++++ method =     %s   lattice: %s"%(method,lattice))
     print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-
-    filename = "/scisoft/data/srio/COMSYL/ID16/id16s_ebs_u18_1400mm_1h_new_s1.0.npy"
 
     autocorrelation_function = AutocorrelationFunction.load(filename)
 
@@ -177,7 +186,7 @@ if __name__ == "__main__":
         print("\n\n????AFTER: ")
         print(comsyl_beamline.info())
 
-        directory_name = "propagation_wofry_EBS"
+        directory_name = "propagation_wofry_%s"%lattice
 
 
     #
@@ -215,7 +224,7 @@ if __name__ == "__main__":
         af_propagated = comsyl_beamline.propagate_af(autocorrelation_function,
                                                      directory_name=directory_name,
                                                      af_output_file_root="%s/propagated_beamline"%(directory_name),
-                                                     maximum_mode=number_of_modes, python_to_be_used="/users/srio/OASYS1.1d/miniconda3/bin/python")
+                                                     maximum_mode=number_of_modes, python_to_be_used=python_to_be_used)
 
 
         # for i in range(number_of_modes):
