@@ -25,8 +25,9 @@ def plot1(z,x,y,xrange=[0,0],yrange=[0,0],xtitle="",ytitle="",title="",filename=
     #
     axScatter = figure.add_axes(rect_scatter)
 
-    axScatter.set_xlabel(xtitle)
-    axScatter.set_ylabel(ytitle)
+    axScatter.set_xlabel(xtitle,fontsize=20)
+    axScatter.set_ylabel(ytitle,fontsize=20)
+    axScatter.tick_params(labelsize=24)
 
 
     axScatter.axis(xmin=hfactor*xrange[0],xmax=xrange[1])
@@ -101,7 +102,7 @@ if __name__ == "__main__":
     from srxraylib.plot.gol import plot_image
     import numpy
 
-    filename = "/users/srio/Oasys/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/rediagonalized.npz"
+    filename = "rediagonalized.npz"
 
     af_name = filename.split("/")[-1].replace(".npz", "")
 

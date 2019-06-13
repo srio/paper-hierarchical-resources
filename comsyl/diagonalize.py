@@ -2,8 +2,12 @@
 
 import numpy
 
-from srwlib import *
+# from srwlib import *
 import sys
+
+
+import comsyl
+print(">>>>>>>",comsyl.__file__)
 from comsyl.autocorrelation.AutocorrelationFunction import AutocorrelationFunction
 from comsyl.autocorrelation.AutocorrelationFunctionPropagator import AutocorrelationFunctionPropagator
 from comsyl.parallel.utils import isMaster, barrier
@@ -14,8 +18,8 @@ from comsyl.waveoptics.Wavefront import NumpyWavefront, SRWWavefront
 
 if __name__ == "__main__":
 
-    filename =     "/users/srio/Oasys/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/propagated_beamline.npz"
-    filename_out = "/users/srio/Oasys/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/rediagonalized.npz"
+    filename =     "/users/srio/OASYS1.1e/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/propagated_beamline.npz"
+    filename_out = "/users/srio/OASYS1.1e/paper-hierarchical-resources/comsyl/propagation_wofry_EBS/rediagonalized.npz"
 
     af_name = filename.split("/")[-1].replace(".npz", "")
 

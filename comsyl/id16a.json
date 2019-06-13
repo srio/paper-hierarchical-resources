@@ -1,0 +1,224 @@
+{
+    "CLASS_NAME": "ComsylWofryBeamline",
+    "light_source": {
+        "CLASS_NAME": "EmptyLightSource",
+        "name": "Empty"
+    },
+    "beamline_elements_list": [
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOScreen",
+                "boundary_shape": {
+                    "CLASS_NAME": "BoundaryShape"
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.0,
+                "q": 28.3,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 8.0,
+                "magnification_y": 10.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOSlit",
+                "boundary_shape": {
+                    "CLASS_NAME": "Rectangle",
+                    "x_left": -0.0018849,
+                    "x_right": 0.0018849,
+                    "y_bottom": -0.0018849,
+                    "y_top": 0.0018849
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.0,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 1.0,
+                "magnification_y": 1.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOIdealLens",
+                "focal_x": 8.319,
+                "focal_y": 99999999999999.0
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.0,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 1.0,
+                "magnification_y": 1.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOSlit",
+                "boundary_shape": {
+                    "CLASS_NAME": "Rectangle",
+                    "x_left": -2.5e-05,
+                    "x_right": 2.5e-05,
+                    "y_bottom": -0.5,
+                    "y_top": 0.5
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 11.7,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 0.01,
+                "magnification_y": 1.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOSlit",
+                "boundary_shape": {
+                    "CLASS_NAME": "Rectangle",
+                    "x_left": -0.025,
+                    "x_right": 0.025,
+                    "y_bottom": -0.00045,
+                    "y_top": 0.00045
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 144.9,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 440.0,
+                "magnification_y": 5.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOIdealLens",
+                "focal_x": 100000000.0,
+                "focal_y": 0.099946
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.0,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 1.0,
+                "magnification_y": 1.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOSlit",
+                "boundary_shape": {
+                    "CLASS_NAME": "Rectangle",
+                    "x_left": -0.000195,
+                    "x_right": 0.000195,
+                    "y_bottom": -0.0065,
+                    "y_top": 0.0065
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.05,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 1.0,
+                "magnification_y": 0.5
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOIdealLens",
+                "focal_x": 0.049983,
+                "focal_y": 100000000.0
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.0,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 1.0,
+                "magnification_y": 1.0
+            }
+        },
+        {
+            "CLASS_NAME": "ComsylWofryBeamlineElement",
+            "optical_element": {
+                "CLASS_NAME": "WOSlit",
+                "boundary_shape": {
+                    "CLASS_NAME": "Rectangle",
+                    "x_left": -0.5,
+                    "x_right": 0.5,
+                    "y_bottom": -0.5,
+                    "y_top": 0.5
+                }
+            },
+            "coordinates": {
+                "CLASS_NAME": "ElementCoordinates",
+                "p": 0.05,
+                "q": 0.0,
+                "angle_radial": 0.0,
+                "angle_azimuthal": 0.0
+            },
+            "propagator_handler": "FRESNEL_ZOOM_XY_2D",
+            "propagator_specific_parameters": {
+                "shift_half_pixel": 1,
+                "magnification_x": 7e-05,
+                "magnification_y": 9e-05
+            }
+        }
+    ]
+}
