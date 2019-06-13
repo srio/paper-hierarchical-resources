@@ -13,8 +13,8 @@ def plot1(z,x,y,xrange=[0,0],yrange=[0,0],xtitle="",ytitle="",title="",filename=
     hfactor = 1.0
     vfactor = 1.0
 
-    left, width = 0.1, 0.65
-    bottom, height = 0.1, 0.65
+    left, width = 0.13, 0.61
+    bottom, height = 0.09, 0.61
     bottom_h = left_h = left + width + 0.02
     rect_scatter = [left, bottom, width, height]
     rect_histx = [left, bottom_h, width, 0.2]
@@ -124,11 +124,11 @@ if __name__ == "__main__":
 
     # spectral density
 
-    sd0 = numpy.abs(af.coherentMode(0))**2
-    sd1 = numpy.abs(af.coherentMode(1))**2
-
-    sd = af.eigenvalue(0) * sd0 + af.eigenvalue(1) * sd1
-    plot1(sd0,1e9*x,1e9*y,xrange=[-50, 50],yrange=[-50, 50],xtitle="H [nm]",ytitle="V [nm]",filename="/tmp/final_spectral_density.png")
+    # sd0 = numpy.abs(af.coherentMode(0))**2
+    # sd1 = numpy.abs(af.coherentMode(1))**2
+    #
+    # sd = af.eigenvalue(0) * sd0 + af.eigenvalue(1) * sd1
+    # plot1(sd0,1e9*x,1e9*y,xrange=[-50, 50],yrange=[-50, 50],xtitle="H [nm]",ytitle="V [nm]",filename="/tmp/final_spectral_density.png")
 
 
     # fig,ax = plot_image(sd0,1e6*x,1e6*y,cmap='jet',figsize=(6,4),add_colorbar=False,show=1,
