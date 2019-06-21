@@ -8,7 +8,7 @@ def first_version():
     files = ["ID16A_ML_W-B4C_120Strp","ID16A_KB1_VF","ID16A_KB1_HF"]
     fontsize = 12
 
-    plt.figure(figsize=(10,20))
+    plt.figure(figsize=(10,10))
 
     plt_counter = 0
     for file in files:
@@ -53,8 +53,8 @@ def first_version():
         # print("File written to disk: ",filename)
         # plt.show()
 
-    filename = "metrology.eps"
-    plt.savefig(filename)
+    filename = "metrology.pdf"
+    plt.savefig(filename, bbox_inches='tight')
     print("File written to disk: ",filename)
     plt.show()
 
