@@ -75,9 +75,9 @@ if __name__ == "__main__":
     plot(e_ebs_1, f_ebs_1,
          e_esrf_1, f_esrf_1,
          legend=["EBS","ESRF",],
-         ytitle="Flux [photons/s/o.1%bw]", xtitle="Poton energy [eV]", title="Undulator Flux",
+         ytitle="Flux [photons/s/0.1%bw]", xtitle="Photon energy [eV]", title="",
          xlog=False, ylog=False, show=False)
 
-    plt.savefig("/tmp/fluxU18.png")
+    plt.savefig("/tmp/fluxU18.png",dpi=300)
     print("File /tmp/fluxU18.png written to disk.")
     plt.show()

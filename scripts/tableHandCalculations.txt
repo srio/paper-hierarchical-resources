@@ -1,39 +1,39 @@
 
 
  ESRF WITH OPEN VSS =====================================================
-SOURCE x,z,x',z' 977.193  9.59981  26.9622  12.0413  
-SLIT PLANE       403.999  481.653  65.2164  12.0413  
-FOCAL PLANE      0.139358  0.0051919  7800  9000 
+SOURCE x,z,x',z' 977.193  9.58148  26.9289  11.9665  
+SLIT PLANE       403.999  478.66  65.1357  11.9665  
+FOCAL PLANE      0.139358  0.00518198  7800  9000 
  Demagnification H:7012.111111 x V:1849.000000 
- N.A. H:2.690583  V:4.867496 
-Transmission (percent) H: 4.125626, V: 40.423280, H*V: 1.667713
-Flux: 3.16866e+13 photons/s
+ N.A. [urad]  H:2.69058  V:4.8675 
+Transmission (percent) H: 4.130733, V: 40.676058, H*V: 1.680219
+Flux: 3.19242e+13 photons/s
 
 
 
 
 
  EBS WITH OPEN VSS =====================================================
-SOURCE x,z,x',z' 71.2576  10.0194  15.6022  12.163  
-SLIT PLANE       29.4599  486.522  37.7386  12.163  
-FOCAL PLANE      0.0101621  0.00541885  7800  9000 
+SOURCE x,z,x',z' 71.2551  10.0019  15.5445  12.089  
+SLIT PLANE       29.4588  483.558  37.599  12.089  
+FOCAL PLANE      0.0101617  0.00540935  7800  9000 
  Demagnification H:7012.111111 x V:1849.000000 
- N.A. H:2.690583  V:4.867496 
-Transmission (percent) H: 7.129532, V: 40.018750, H*V: 2.853150
-Flux: 8.27413e+13 photons/s
+ N.A. [urad]  H:2.69058  V:4.8675 
+Transmission (percent) H: 7.155987, V: 40.263968, H*V: 2.881284
+Flux: 8.35572e+13 photons/s
 
 
 
 
 
  ESRF WITH 50 um=====================================================
-SOURCE x,y,x',z' 977.193  9.59981  26.9622  12.0413  
-SLIT PLANE       50  481.653  65.2164  12.0413  
-FOCAL PLANE      0.0172473  0.0051919  7800  9000 
+SOURCE x,y,x',z' 977.193  9.58148  26.9289  11.9665  
+SLIT PLANE       50  478.66  65.1357  11.9665  
+FOCAL PLANE      0.0172473  0.00518198  7800  9000 
  Demagnification H:7012.111111 x V:1849.000000 
  N.A. H:2.690583  V:4.867496 
-Transmission (percent) H: 0.515703, V: 40.423280, H*V: 0.208464
-Flux: 3.96082e+12 photons/s
+Transmission (percent) H: 0.516342, V: 40.676058, H*V: 0.210027
+Flux: 3.99052e+12 photons/s
 
 
 
